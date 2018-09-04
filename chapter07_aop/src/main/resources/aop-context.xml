@@ -8,8 +8,8 @@
 
     <aop:aspectj-autoproxy/>
 
-    <bean class="com.cyh.TestBean"/>
-    <bean class="com.cyh.AspectJTest"/>
+    <bean id="testBeanCYH" class="com.cyh.TestBean"/>
+    <bean id="aspectJTestCYH" class="com.cyh.AspectJTest"/>
 
 
 </beans>
