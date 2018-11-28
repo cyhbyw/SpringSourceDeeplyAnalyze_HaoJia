@@ -21,9 +21,16 @@
         <property name="mapperLocations" value="classpath:mybatis/mapper/*.xml"></property>
     </bean>
 
+    <!-- BeanFactory that enables injection of MyBatis mapper interfaces. 需要一个一个地注册Mapper比较低效 -->
+    <!--
     <bean class="org.mybatis.spring.mapper.MapperFactoryBean">
         <property name="mapperInterface" value="com.cyh.UserMapper"/>
         <property name="sqlSessionFactory" ref="sqlSessionFactoryBean"/>
+    </bean>
+    -->
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.cyh"/>
     </bean>
 
 </beans>
