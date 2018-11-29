@@ -16,10 +16,19 @@ public class UserServiceImpl implements UserService {
 
     @Transactional(rollbackFor = RuntimeException.class)
     @Override
-    public void save(User user) throws Exception {
+    public void saveWithTransaction(User user) {
+        doSave(user);
+    }
+
+    private void doSave(User user) {
         jdbcTemplate.update("INSERT INTO tx_user(name, age, sex) VALUES (?, ?, ?)",
                 new Object[] {user.getName(), user.getAge(), user.getSex()});
 
         int x = 1 / 0;
+    }
+
+    @Override
+    public void saveWithoutTransaction(User user) {
+        doSave(user);
     }
 }
