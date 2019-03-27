@@ -6,5 +6,17 @@ package com.cyh.propagation.test;
  */
 public interface StorageService {
 
-    void reduceStorage(String commodityCode, Integer count);
+
+    void saveWithTransaction_required(String commodityCode, Integer count, ExceptionLocationEnum locationEnum);
+
+    void saveWithTransaction_requiresNew(String commodityCode, Integer count, ExceptionLocationEnum locationEnum);
+
+    void saveWithTransaction_nested(String commodityCode, Integer count, ExceptionLocationEnum locationEnum);
+
+    void saveWithTransaction_mandatory(String commodityCode, Integer count, ExceptionLocationEnum locationEnum);
+
+    void saveWithTransaction_supports(String commodityCode, Integer count, ExceptionLocationEnum locationEnum);
+
+    void saveWithTransaction_notSupported(String commodityCode, Integer count, ExceptionLocationEnum locationEnum);
+
 }

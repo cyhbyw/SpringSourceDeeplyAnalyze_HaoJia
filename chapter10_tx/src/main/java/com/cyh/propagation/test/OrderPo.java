@@ -13,4 +13,11 @@ public class OrderPo {
     private String commodityCode;
     private Integer count;
     private Integer money;
+
+    public OrderPo(String userId, String commodityCode, Integer count, Integer money) {
+        this.userId = userId;
+        this.commodityCode = commodityCode;
+        this.count = count;
+        this.money = money;
+    }
 }
