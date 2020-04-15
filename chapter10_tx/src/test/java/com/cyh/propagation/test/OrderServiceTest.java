@@ -72,7 +72,7 @@ public class OrderServiceTest {
     }
 
     /**
-     * 事务传播属性为 REQUIRES_NEW 且 OUTER 事务异常 == 全部回滚
+     * 事务传播属性为 REQUIRES_NEW 且 OUTER 事务异常 == 外部回滚、内部不回滚
      */
     @Test
     public void test_saveWithTransaction_requiresNew_outerException() {
