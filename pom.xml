@@ -21,7 +21,7 @@
         <spring-version>4.2.6.RELEASE</spring-version>
         <aspectj.version>1.8.1</aspectj.version>
         <aopalliance.version>1.0</aopalliance.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
     </properties>
 
     <dependencyManagement>
@@ -130,7 +130,7 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.12</version>
+                <version>4.13.1</version>
                 <scope>test</scope>
             </dependency>
 
